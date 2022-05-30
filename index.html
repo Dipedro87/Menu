@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  
+<head>
+    <title>Navegação Móvel</title>
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href= "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+        
+        /* Estilo */
+        .menu-list {
+            max-width: 300px;
+            margin: auto;
+            height: 500px;
+            color: #000000;
+            background-color: #020202;
+            border-radius: 10px;
+        }
+        
+        /* Logo, menu de navegação */
+        .geeks {
+            overflow: hidden;
+            background-color: #fffffff1;
+            position: relative;
+            border-radius: 1px;
+        }
+        
+        /* estilo menu */
+        .geeks #menus {
+            display: none;
+        }
+        
+        /* especificacao do menu */
+        .geeks a {
+            text-decoration: none;
+            color: #000000;
+            padding: 14px 16px;
+            font-size: 16px;
+            display: block;
+        }
+        
+        /* navegacao */
+        .geeks a.icon {
+            display: block;
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        
+        /* efeito do mouse */
+        .geeks a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+    </style>
+</head>
+  
+<body>
+  
+    <div class="menu-list">
+  
+        <!-- Menu e navegação -->
+        <div class="geeks">
+            <a href="#" class="">Menu Móvel</a>
+            <div id="menus">
+                <a href="#">Linguagem</a>
+                <a href="#">Praticar</a>
+                <a href="#">Puzzle</a>
+  
+            </div>
+  
+            <!-- barra de navegação -->
+            <a href="javascript:void(0);" class="icon" 
+                    onclick="geeksforgeeks()">
+  
+                <i onclick="myFunction(this)" 
+                        class="fa fa-plus-circle">
+                </i>
+            </a>
+        </div>
+    </div>
+  
+    <script>
+        
+        // funcao para chamar a barra
+        function geeksforgeeks() {
+            var x = document.getElementById("menus");
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
+            }
+        }
+    </script>
+  
+    <script>
+        
+        // funcao para alterar entre aberto e fechado na barra
+        function myFunction(x) {
+            x.classList.toggle("fa-minus-circle");
+        }
+    </script>
+</body>
+  
+</html>
